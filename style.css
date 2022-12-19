@@ -68,9 +68,8 @@ body {
   border-radius: 0.7rem;
 }
 
-
 .head-one button:hover {
-  background-color: #3e3c3c; 
+  background-color: #3e3c3c;
   color: #fff;
 }
 
@@ -319,11 +318,26 @@ h1 {
 }
 
 @keyframes example {
-  0%   {left:0px; top:0rem;}
-  25%  {left:0px; top:.5rem;}
-  50%  {left:0px; top:1rem;}
-  75%  {left:0px; top:1.5rem;}
-  100% {left:0px; top:2rem;}
+  0% {
+    left: 0px;
+    top: 0rem;
+  }
+  25% {
+    left: 0px;
+    top: 0.5rem;
+  }
+  50% {
+    left: 0px;
+    top: 1rem;
+  }
+  75% {
+    left: 0px;
+    top: 1.5rem;
+  }
+  100% {
+    left: 0px;
+    top: 2rem;
+  }
 }
 
 .third {
@@ -352,12 +366,21 @@ h1 {
   letter-spacing: 0.25px;
 }
 
-.head-three h3:active {
+.head-three h3:first-child {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.2rem;
+  border-bottom: 7px solid #fff;
+  height: 70%;
+}
+
+.head-three h3:first-child:hover {
   color: #fff;
 }
 
 .head-three h3:hover {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(177, 175, 175, 0.6);
   cursor: pointer;
 }
 
@@ -449,7 +472,7 @@ h1 {
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-  border-top: 0.5px solid;
+  border-top: 0.5px solid grey;
 }
 
 .j h6 {
@@ -527,7 +550,7 @@ h1 {
   height: 100%;
   width: 100%;
   align-items: center;
-  border-top: 0.5px solid;
+  border-top: 0.5px solid grey;
 }
 
 .p-one {
@@ -586,7 +609,7 @@ h1 {
   display: flex;
   align-items: center;
   height: 100%;
-  border-top: 0.5px solid;
+  border-top: 0.5px solid grey;
 }
 
 .q-two,
@@ -612,7 +635,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  border-top: 0.5px solid;
+  border-top: 0.5px solid grey;
 }
 
 .r-one {
@@ -637,7 +660,7 @@ h1 {
   justify-content: center;
   width: 70%;
   height: 5rem;
-  border-top: 0.5px solid;
+  border-top: 0.5px solid grey;
 }
 
 .zz {
@@ -647,8 +670,8 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  border-top: 0.5px solid;
-  border-bottom: 0.5px solid;
+  border-top: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
 }
 
 .j-y {
@@ -669,7 +692,7 @@ h1 {
   justify-items: center;
   align-items: center;
   height: 150vh;
-  width: 70%;
+  width: 75%;
   text-align: start;
   padding-top: 3rem;
 }
@@ -825,6 +848,10 @@ h1 {
   display: flex;
 }
 
+.b-two img {
+  height: 1.5rem;
+}
+
 @media screen and (max-width: 1115px) {
   .first {
     height: auto;
@@ -849,7 +876,6 @@ h1 {
     width: auto;
     transform: translate(10.5rem, 1rem);
   }
-
 }
 
 @media screen and (max-width: 1023px) {
@@ -878,6 +904,11 @@ h1 {
   .c h2 {
     font-size: 24px;
     max-width: 62%;
+  }
+
+  .first {
+    padding-left: 3re;
+    padding-right: 3rem;
   }
 
   .third {
@@ -917,104 +948,295 @@ h1 {
     max-width: 82%;
   }
 
+  .fourth {
+    height: fit-content;
+    font-family: rice;
+  }
+
   .j-y {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    'j j'
-    'p-one '          ;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "j j"
+      "p-one p-two"
+      "q-one q-one"
+      "q-two q-three"
+      "r-one r-one"
+      "r-two r-three"
+      "s-one s-one"
+      "s-two s-three"
+      "t-one t-one"
+      "t-two t-three"
+      "u-one u-one"
+      "u-two u-three"
+      "v-one v-one"
+      "v-two v-three"
+      "w-one w-one"
+      "w-two w-three"
+      "x-one x-one"
+      "x-two x-three"
+      "y-one y-one"
+      "y-two y-three";
+    height: fit-content;
+  }
+
+  .j {
+    grid-area: j;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    height: 7rem;
+  }
+
+  .p {
+    border-right: 1px solid grey;
+  }
+
+  .p {
+    padding: 1.5rem;
+  }
+
+  .p button:last-child {
+    width: 65%;
+  }
+
+  .p-two {
+    height: 100%;
+  }
+
+  .q-one {
+    display: flex;
+    justify-content: center;
+    grid-area: q-one;
+  }
+
+  .r-one {
+    display: flex;
+    justify-content: center;
+    grid-area: r-one;
+  }
+
+  .s-one {
+    display: flex;
+    justify-content: center;
+    grid-area: s-one;
+  }
+
+  .t-one {
+    display: flex;
+    justify-content: center;
+    grid-area: t-one;
+  }
+
+  .u-one {
+    display: flex;
+    justify-content: center;
+    grid-area: u-one;
+  }
+
+  .v-one {
+    display: flex;
+    justify-content: center;
+    grid-area: v-one;
+  }
+
+  .w-one {
+    display: flex;
+    justify-content: center;
+    grid-area: w-one;
+  }
+
+  .x-one {
+    display: flex;
+    justify-content: center;
+    grid-area: x-one;
+  }
+
+  .y-one {
+    display: flex;
+    justify-content: center;
+    grid-area: y-one;
+  }
+
+  .q-two,
+  .q-three,
+  .r-two,
+  .r-three,
+  .s-two,
+  .s-three,
+  .t-two,
+  .t-three,
+  .u-two,
+  .u-three,
+  .v-two,
+  .v-three,
+  .w-two,
+  .w-three,
+  .x-two,
+  .x-three,
+  .y-two,
+  .y-three {
+    border-top: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .q-two,
+  .r-two,
+  .s-two,
+  .t-two,
+  .u-two,
+  .v-two,
+  .w-two,
+  .x-two,
+  .y-two {
+    border-right: 1px solid #e8eaed;
+    height: 2rem;
+  }
+
+  .q-one,
+  .r-one,
+  .s-one,
+  .t-one,
+  .u-one,
+  .v-one,
+  .w-one,
+  .x-one,
+  .y-one {
+    height: 3rem;
+  }
+
+  .z {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    width: 100%;
+  }
+  .zz {
+    width: 100%;
+    height: 5rem;
+  }
+
+  br:nth-last-child(2),
+  br:last-child {
+    display: none;
   }
 
   .f-head {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    'h-one h-one'
-    'h-two h-three';
-    /* grid-template-areas: "h-one"
-      "h-two h-three"; */
-}
+    grid-template-areas:
+      "h-one h-one"
+      "h-two h-three";
+  }
 
-.h-one {
+  .h-one {
     grid-area: h-one;
-}
+  }
 
-.h-two {
+  .h-two {
     grid-area: h-two;
-}
+  }
 
-.h-three {
+  .h-three {
     grid-area: h-three;
-}
-
-
-  .z {
-    display: flex;
-    align-items: center;
-    width: 100%;
   }
-
-  .zz {
-    width: 100%;
-  }
-
 }
 
 @media screen and (max-width: 850px) {
+  .boxes {
+    grid-auto-rows: 31rem;
+    grid-auto-columns: 20.15rem;
+  }
 
-    .boxes {
-        grid-auto-rows: 31rem;
-        grid-auto-columns: 20.15rem;
-    }
+  .fourth {
+    padding-top: 0;
+  }
 
-    .footer {
-        height: 180vh;
-    }
+  .footer {
+    height: 180vh;
+  }
 
-    .f-head {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        'h-one h-one'
-        'h-two h-two'
-        'h-three h-three'  ;
-        height: 67rem;
-    }
+  .f-head {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "h-one h-one"
+      "h-two h-two"
+      "h-three h-three";
+    height: 67rem;
+  }
 
-    .h-two, .h-three {
-        height: 10rem;
-    }
+  .h-two,
+  .h-three {
+    height: 10rem;
+  }
 
-    .list-items-one {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .list-items-one {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-template-areas:
+      "row-one row-two"
+      "row-three row-four";
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .third {
+    background-position-y: 0;
+    height: 50rem;
+  }
 
+  .fourth {
+    padding-top: 4rem;
+  }
+
+  .q-two,
+  .r-two,
+  .s-two,
+  .t-two,
+  .u-two,
+  .v-two,
+  .w-two,
+  .x-two,
+  .y-two {
+    border-right: none;
+  }
+
+  .f-head,
+  .socials {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .boxes {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
+  .boxes {
+    display: grid;
+    grid-template-rows: 31rem;
+    grid-template-columns: 20.3rem;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+  }
 
-    .boxes {
-        display: grid;
-        grid-template-rows: 31rem;
-        grid-template-columns: 20.3rem;
-        grid-template-areas:
-            "one"
-            "two"
-            "three"
-            "four";
-    }
-
-    .text {
-        width: auto;
-        transform: translate(-0.2rem, 1rem);
-    }
+  .text {
+    width: auto;
+    transform: translate(-0.2rem, 1rem);
+  }
 }
-
-
